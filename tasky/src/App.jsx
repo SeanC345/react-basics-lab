@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 function App() {
   const [taskState, setTaskState] = useState({
     tasks: [
-      { title: "Dishes", deadline: "Today", description: "Empty dishwasher" },
-      { title: "Laundry", deadline: "Tomorrow", description: "Fold laundry and put away" },
-      { title: "Tidy", deadline: "Today", description: "Tidy up living room" }
+      { id: 1, title:"Dishes", description: "Empty dishwasher", deadline: "Today" },
+      { id: 2, title:"Laundry", description: "Wash and fold clothes", deadline: "Tomorrow" },
+      { id: 3, title:"Grocery Shopping", description: "Buy ingredients for dinner", deadline: "Friday" }
     ]
   });
 
@@ -19,6 +19,7 @@ function App() {
           title={task.title}
           description={task.description}
           deadline={task.deadline}
+          key={task.id}
         />
       ))}
     </div>
