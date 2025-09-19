@@ -53,7 +53,6 @@ function App() {
         form = formState;
     }
     setFormState(form);
-    console.log(formState);
   }
 
   const formSubmitHandler = (event) => {
@@ -61,7 +60,7 @@ function App() {
     const tasks = [...taskState.tasks];
     const form = { ...formState };
     form.id = uuidv4();
-    
+    form.done = false;
     tasks.push(form);
     setTaskState({tasks});
   }
